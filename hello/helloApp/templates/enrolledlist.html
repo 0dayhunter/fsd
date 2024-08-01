@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block title %}Enrolled List{% endblock %}
+{% block content %}
+<h1>Enrolled Student List</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    Select Course Code:<select name="course">
+        {% for c in Course_List %}
+    <option value="{{c.id}}">{{c.courseCode}}</option>
+    {% endfor %}
+    </select>
+    <input type="submit" value="SEARCH"/>
+</form> 
+<table border="1">
+    <tr>
+        <th>SL NO</th>
+        <th>USN</th>
+        <th>NAME</th>
+        <th>SEM</th>
+    </tr>
+    {% for s in Enrolled_List %}
+    <tr style="background-color: lightblue;">
+        <td>{{forloop.counter}}</td>
+        <td>{{s.usn}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.sem}}</td>
+    </tr>
+    {% endfor %}
+</table>   
+{% endblock %}

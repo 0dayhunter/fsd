@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        <body>
+            <center><h1 style="background-color: lightblue;">BTI Portal</h1></center>
+            <nav>
+                <a href="/home/">HOME</a>
+                <a href="/studentlist/">STUDENT LIST</a>
+                <a href="/courselist/">COURSE LIST</a>
+                <a href="/register/">REGISTER</a>
+                <a href="/enrolledlist/">ENROLLED LIST</a>
+                <a href="/addproject/">ADD PROJECT</a>
+                <a href="/studentlistview/">STUDENT LIST VIEW</a>
+                <a href="/aboutus/">ABOUT US</a>
+                <a href="/contactus/">CONTACT US</a>
+            </nav>
+            <section>
+                {% block content %}{% endblock %}
+            </section>
+            <footer>
+                <hr>
+                <h3>&copy; Designed and Developed by SAHIL IQUBAL,student, dept. of CSE,BTI</h3>
+            </footer>
+        </body>
+    </head>

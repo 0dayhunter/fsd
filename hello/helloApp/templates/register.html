@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<h1>Register</h1>
+<form action="" method="POST">
+   {% csrf_token %}
+Select USN: <select name="student">
+    {% for s in Student_List %}
+    <option value="{{s.id}}">{{s.usn}}</option>
+    {% endfor %}
+</select>
+Select Course Code: <select name="course">
+    {% for c in Course_List %}
+    <option value="{{c.id}}">{{c.courseCode}}</option>
+    {% endfor %}
+</select>
+<input type="submit" value="REGISTER"/>
+</form>
+{% endblock %}

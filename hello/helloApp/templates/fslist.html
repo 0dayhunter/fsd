@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fruit and Student list</title>
+</head>
+<body>
+	<h1 style="background-color:blue;">Unordered Fruit list</h1>
+    <ul>
+        {% for f in Fruit_list %}
+        <li>{{f}}</li>
+        {% endfor %}
+    </ul>
+
+    <h1 style="background-color:blue;">Ordered Student list</h1>
+    <ol>
+        {% for s in Student_list %}
+        <li>{{s}}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>

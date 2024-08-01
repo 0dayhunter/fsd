@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block title %}Course List{% endblock %}
+{% block content %}
+<h1>Course List</h1>
+<table border="1">
+    <tr>
+        <th>SL NO</th>
+        <th>Course Code</th>
+        <th>Course Title</th>
+        <th>Course Credits</th>
+    </tr>
+    {% for c in Course_List %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{c.courseCode}}</td>
+        <td>{{c.courseTitle}}</td>
+        <td>{{c.courseCredits}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

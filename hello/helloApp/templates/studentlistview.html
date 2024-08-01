@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}Student List View{% endblock %}
+{% block content %}
+<h1>Student List View</h1>
+<table border="1">
+    <tr>
+        <th>SL NO</th>
+        <th>USN</th>
+    </tr>
+    {% for s in student_list %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td><a href="/detailedstudentview/{{student.pk}}/">{{ s.usn }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

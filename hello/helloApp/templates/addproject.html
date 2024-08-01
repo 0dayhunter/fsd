@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block title %}Add project{% endblock %}
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="ADD PROJECT"/>
+</form>
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student List</title>
+    </head>
+    <body>
+        <h1 style="background-color: cyan;">Student List</h1>
+        <table border="1">
+            <tr>
+                <th>SL NO</th>
+                <th>USN</th>
+                <th>NAME</th>
+                <th>SEM</th>
+                <th>SECTION</th>
+
+                {% for s in Student_List %}
+                {% if forloop.counter|divisibleby:"2" %}
+                <tr style="background-color: lightblue;">
+                    <td>{{forloop.counter}}</td>
+                    <td>{{s.USN}}</td>
+                    <td>{{s.NAME}}</td>
+                    <td>{{s.SEM}}</td>
+                    <td>{{s.SEC}}</td>
+                </tr>
+
+                {% else %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{s.USN}}</td>
+                    <td>{{s.NAME}}</td>
+                    <td>{{s.SEM}}</td>
+                    <td>{{s.SEC}}</td>
+                </tr>
+                {% endif %}
+
+                {% endfor %}
+            </tr>
+        </table>
+    </body>
+</html>

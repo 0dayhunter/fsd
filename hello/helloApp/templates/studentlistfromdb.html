@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block title %}Student List{% endblock %}
+{% block content %}
+<h1>Student List</h1>
+<table border="1">
+    <tr>
+        <th>SL NO</th>
+        <th>USN</th>
+        <th>NAME</th>
+        <th>SEM</th>
+    </tr>
+    {% for s in Student_List %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{s.usn}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.sem}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
